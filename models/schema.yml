@@ -1,4 +1,6 @@
- sources:
+version: 2
+
+sources:
   - name : raw
     schema : dbt
     tables :
@@ -16,3 +18,13 @@
       - name: pdt_id
       - name: revenue
       - name: quantity
+
+
+  - name: ship
+    identifier : raw_gz_ship
+    columns:
+      - name: orders_id
+      - name: shipping_fee
+      - name: shipping_fee_1
+      - name: logCost
+      - name: ship_cost
